@@ -1,0 +1,11 @@
+{
+  "app": {
+    "welcome": "Welcome to Angular Starter",
+    "description": "To get started, edit <code>src/app/pages/home/home.component.html</code>"
+  },
+  "notFound": {
+    "title": "404 Not Found",
+    "description": "The page you requested was not found.",
+    "back": "Back to Home"
+  }
+}
