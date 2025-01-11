@@ -12,7 +12,7 @@ import {
   providedIn: 'root',
 })
 export class FormsService {
-  private _fb = inject(FormBuilder);
+  private readonly _fb = inject(FormBuilder);
 
   createConrol<T>(initialValue: T, valdators: ValidatorFn[]): FormControl<T> {
     return this._fb.nonNullable.control(initialValue, valdators);

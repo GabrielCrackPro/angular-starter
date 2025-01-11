@@ -6,7 +6,7 @@ import { errorResponseInterceptor } from '@core/interceptors';
 import { provideTranslateService } from '@ngx-translate/core';
 import { providePrimeNG } from 'primeng/config';
 import { routes } from './app.routes';
-import { provideModal } from './providers';
+import { provideMessage, provideModal } from './providers';
 import { themeConfig } from './theme.config';
 import { translateConfig } from './translate.config';
 
@@ -15,6 +15,7 @@ export const appConfig: ApplicationConfig = {
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideAnimations(),
     provideModal(),
+    provideMessage(),
     provideRouter(routes, withComponentInputBinding()),
     provideHttpClient(withInterceptors([errorResponseInterceptor])),
     provideTranslateService(translateConfig),
