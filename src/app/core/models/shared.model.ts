@@ -11,3 +11,9 @@ export type ButtonSeverity =
   | 'primary'
   | 'secondary'
   | 'contrast';
+
+export interface TableColumn {
+  field: string;
+  header: string;
+  sortable?: boolean;
+}
