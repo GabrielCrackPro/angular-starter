@@ -12,7 +12,7 @@ import { DynamicDialogConfig } from 'primeng/dynamicdialog';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ModalComponent {
-  private _dialogConfig: DynamicDialogConfig<any> = inject(DynamicDialogConfig);
+  private _dialogConfig = inject(DynamicDialogConfig);
   private _modalService = inject(ModalService);
 
   data = this._dialogConfig.data;

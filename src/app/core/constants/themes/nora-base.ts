@@ -1,7 +1,7 @@
 import { definePreset } from '@primeng/themes';
 import Nora from '@primeng/themes/nora';
 
-const NoraBased = definePreset(Nora, {
+export const NoraBased = definePreset(Nora, {
   primitive: {
     borderRadius: {
       none: '0',
