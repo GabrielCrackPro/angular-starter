@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { ModalService } from '@core/services';
 import { Button } from 'primeng/button';
-import { DynamicDialogConfig, DynamicDialogRef } from 'primeng/dynamicdialog';
+import { DynamicDialogConfig } from 'primeng/dynamicdialog';
 
 @Component({
   selector: 'app-modal',
@@ -12,11 +13,11 @@ import { DynamicDialogConfig, DynamicDialogRef } from 'primeng/dynamicdialog';
 })
 export class ModalComponent {
   private _dialogConfig: DynamicDialogConfig<any> = inject(DynamicDialogConfig);
-  private _dialogRef = inject(DynamicDialogRef);
+  private _modalService = inject(ModalService);
 
-  public data = this._dialogConfig.data;
+  data = this._dialogConfig.data;
 
-  public close(): void {
-    this._dialogRef.close();
+  close(): void {
+    this._modalService.close<ModalComponent>();
   }
 }
