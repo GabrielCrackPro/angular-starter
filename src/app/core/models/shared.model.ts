@@ -26,3 +26,8 @@ export interface CardAction {
   severity: ButtonSeverity;
   onClick: () => void;
 }
+
+export interface SelectOption {
+  label: string;
+  value: string;
+}

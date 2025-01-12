@@ -11,5 +11,8 @@
   "table": {
     "empty": "No records found",
     "search": "Search"
+  },
+  "select": {
+    "placeholder": "Select an option"
   }
 }

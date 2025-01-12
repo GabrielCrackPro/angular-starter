@@ -1,0 +1,16 @@
+<p-select
+  [options]="options()"
+  [placeholder]="placeholder() | translate"
+  [checkmark]="showCheck()"
+  [showClear]="showClear()"
+  [editable]="editable()"
+  [filter]="filter()"
+  [filterBy]="filterBy()"
+  [loading]="loading()"
+  [virtualScroll]="virtualScroll()"
+  [variant]="variant()"
+  [disabled]="disabled"
+  [(ngModel)]="selectedOption"
+  (onChange)="onValueChange($event)"
+  optionLabel="label"
+/>
