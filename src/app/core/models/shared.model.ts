@@ -1,4 +1,5 @@
 import { Type } from '@angular/core';
+import { KeyFilterPattern } from 'primeng/keyfilter';
 
 export type Component<T> = Type<T>;
 
@@ -11,6 +12,8 @@ export type ButtonSeverity =
   | 'primary'
   | 'secondary'
   | 'contrast';
+
+export type InputKeyFilter = RegExp | KeyFilterPattern | null | undefined;
 
 export interface TableColumn {
   field: string;

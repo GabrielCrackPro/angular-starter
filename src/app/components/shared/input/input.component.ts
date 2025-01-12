@@ -15,11 +15,12 @@ import {
   ValidationErrors,
   Validator,
 } from '@angular/forms';
+import { InputKeyFilter } from '@core/models';
 import { FloatLabel } from 'primeng/floatlabel';
 import { InputMask } from 'primeng/inputmask';
 import { InputNumber } from 'primeng/inputnumber';
 import { InputText } from 'primeng/inputtext';
-import { KeyFilter, KeyFilterPattern } from 'primeng/keyfilter';
+import { KeyFilter } from 'primeng/keyfilter';
 import { Password } from 'primeng/password';
 
 @Component({
@@ -58,7 +59,7 @@ export class InputComponent implements ControlValueAccessor, Validator {
   labelPosition = input<'over' | 'in' | 'on'>('over');
   variant = input<'filled' | 'outlined'>('outlined');
   mask = input<string>('');
-  keyFilter = input<RegExp | KeyFilterPattern | null | undefined>();
+  keyFilter = input<InputKeyFilter>();
 
   @Input()
   disabled = false;
