@@ -17,3 +17,9 @@ export interface TableColumn {
   header: string;
   sortable?: boolean;
 }
+
+export interface CardAction {
+  label: string;
+  severity: ButtonSeverity;
+  onClick: () => void;
+}
