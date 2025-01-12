@@ -14,12 +14,13 @@ import {
 } from '@angular/forms';
 import { SelectOption } from '@core/models';
 import { TranslateModule } from '@ngx-translate/core';
+import { FloatLabel } from 'primeng/floatlabel';
 import { Select } from 'primeng/select';
 
 @Component({
   selector: 'app-select',
   standalone: true,
-  imports: [Select, FormsModule, TranslateModule],
+  imports: [Select, FloatLabel, FormsModule, TranslateModule],
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
@@ -34,6 +35,8 @@ import { Select } from 'primeng/select';
 export class SelectComponent implements ControlValueAccessor {
   options = input.required<SelectOption[]>();
   placeholder = input<string>('select.placeholder');
+  label = input<string>('');
+  labelPosition = input<'over' | 'in' | 'on'>('over');
   showCheck = input<boolean>(true);
   showClear = input<boolean>(true);
   editable = input<boolean>(false);
